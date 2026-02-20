@@ -52,6 +52,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, onLock
           <Lock size={20} />
           <span className="hidden md:block font-medium">Secure Lock</span>
         </button>
+        <div className="text-xs text-slate-600 text-center mt-2 hidden md:block">v1.0.1</div>
       </div>
     </div>
   );
