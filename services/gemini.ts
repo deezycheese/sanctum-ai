@@ -1,8 +1,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Memory, UserProfile, JournalEntry, Message } from '../types';
 
-// Use gemini-3-pro-preview for deep reasoning and persona mirroring
-const MODEL_NAME = 'gemini-3-pro-preview';
+// Use gemini-3.1-pro-preview for deep reasoning and persona mirroring
+const MODEL_NAME = 'gemini-3.1-pro-preview';
 
 const getClient = () => {
   const apiKey = process.env.API_KEY;
@@ -76,7 +76,8 @@ export const GeminiService = {
       if (error.message === "API Key not found") {
         return "Configuration Error: No API Key found. Please add GEMINI_API_KEY to your Vercel Environment Variables and redeploy.";
       }
-      return "I'm having trouble connecting to my cognitive centers right now. Please check your connection.";
+      // Return the actual error message to help debugging
+      return `Connection Error: ${error.message || "Unknown error"}. Please check your API key and network connection.`;
     }
   },
 
