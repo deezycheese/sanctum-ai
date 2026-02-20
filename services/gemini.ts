@@ -71,8 +71,11 @@ export const GeminiService = {
       });
 
       return response.text || "I'm processing that, but couldn't generate a verbal response.";
-    } catch (error) {
+    } catch (error: any) {
       console.error("Gemini API Error:", error);
+      if (error.message === "API Key not found") {
+        return "Configuration Error: No API Key found. Please add GEMINI_API_KEY to your Vercel Environment Variables and redeploy.";
+      }
       return "I'm having trouble connecting to my cognitive centers right now. Please check your connection.";
     }
   },
