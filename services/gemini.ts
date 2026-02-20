@@ -1,8 +1,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Memory, UserProfile, JournalEntry, Message } from '../types';
 
-// Use gemini-3.1-pro-preview for deep reasoning and persona mirroring
-const MODEL_NAME = 'gemini-3.1-pro-preview';
+// Use gemini-2.0-flash-exp for better free tier availability while maintaining good reasoning
+const MODEL_NAME = 'gemini-2.0-flash-exp';
 
 const getClient = () => {
   const apiKey = process.env.API_KEY;
