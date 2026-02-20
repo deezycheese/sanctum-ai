@@ -1,8 +1,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Memory, UserProfile, JournalEntry, Message } from '../types';
 
-// Use gemini-1.5-flash for maximum availability and speed
-const MODEL_NAME = 'gemini-1.5-flash';
+// Use gemini-3-flash-preview for speed and efficiency
+const MODEL_NAME = 'gemini-3-flash-preview';
 
 const getClient = () => {
   const apiKey = process.env.API_KEY;
