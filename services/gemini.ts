@@ -1,8 +1,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Memory, UserProfile, JournalEntry, Message } from '../types';
 
-// Use gemini-2.0-flash-exp for better free tier availability while maintaining good reasoning
-const MODEL_NAME = 'gemini-2.0-flash-exp';
+// Use gemini-1.5-flash for maximum availability and speed
+const MODEL_NAME = 'gemini-1.5-flash';
 
 const getClient = () => {
   const apiKey = process.env.API_KEY;
